@@ -8,7 +8,7 @@ def encrypt_or_decrypt(text: str, shift: int, reverse=False) -> str:
     total_alphabets = len(alphabets)
     resulted_text = ""
     for letter in text:
-        if re.search(r"[^a-zA-Z0-9]", letter):
+        if re.search(r"[^a-zA-Z]", letter):
             resulted_text += letter
             continue
         if reverse:
